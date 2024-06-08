@@ -8,7 +8,9 @@
     {% for course in data %}
        
        {{forloop.counter}}.{{course|capfirst}}<br>
-
+            {%for k,v  in data_dur.items%}
+              {{k}}{{v}}
+            {% endfor %}
     {% empty %}
         <h1>No data Found</h1>
     {% endfor  %}
