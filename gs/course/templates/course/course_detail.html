@@ -4,15 +4,16 @@
 {% endblock title %}
 {% block content %}
   <h1>We are provideing following Course</h1>
+  <table>
+        {%for k,v  in data_dur.items%}
+        <tr>
+            <td>{{k|capfirst}} Duration {{v|capfirst}}</td>
+        </tr>
+        {% empty %}
+            <h1>No data Found</h1>
+        {% endfor  %}
+</table>
 
-    {% for course in data %}
-       
-       {{forloop.counter}}.{{course|capfirst}}<br>
-            {%for k,v  in data_dur.items%}
-              {{k}}{{v}}
-            {% endfor %}
-    {% empty %}
-        <h1>No data Found</h1>
-    {% endfor  %}
+   
   
 {% endblock content %}
