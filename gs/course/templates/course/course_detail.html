@@ -4,4 +4,13 @@
 {% endblock title %}
 {% block content %}
   <h1>We are provideing following Course</h1>
+
+    {% for course in data %}
+       
+       {{forloop.counter}}.{{course|capfirst}}<br>
+
+    {% empty %}
+        <h1>No data Found</h1>
+    {% endfor  %}
+  
 {% endblock content %}

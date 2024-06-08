@@ -5,4 +5,6 @@ def index(request):
 # Create your views here.
 
 def course_details(request):
-    return render(request,'course/course_detail.html')
+    course=['Python','Django','PostgreSql','Mysql','Git&Github']
+    #course=""
+    return render(request,'course/course_detail.html',{'data':course})
